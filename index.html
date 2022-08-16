@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cup {
+            transform: perspective(140px) rotateX(-45deg);
+            width: 32px;
+            height: 72px;
+            position: relative;
+            border: 2px solid black;
+            animation: load 1.5s linear infinite alternate;
+        }
+
+        @keyframes load {
+            0% {
+                box-shadow: 0 0 #834333 inset;
+            }
+            100% {
+                box-shadow: 0 -70px #834333 inset;
+            }
+        }
+    
+
+    </style>
+</head>
+<body>
+    <p>Cup Filling Animation</p>
+    <div class="cup"></div>
+</body>
+</html>
